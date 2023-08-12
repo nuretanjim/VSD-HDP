@@ -18,6 +18,7 @@
   $ make config-gcc
   $ make 
   $ sudo make install
+```
 
   ![alt text] (https://github.com/nuretanjim/VSD-HDP/blob/main/Yosys%20Installation.png)
 
