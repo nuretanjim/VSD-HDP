@@ -21,3 +21,11 @@
   ```
  (https://github.com/nuretanjim/VSD-HDP/blob/main/Yosys%20Installation.png)
 
+
+## iVerilog Installation
+  ``` html
+  $ Steps to install iverilog
+  $sudo apt-get install iverilog
+  ```
+ (https://github.com/nuretanjim/VSD-HDP/blob/main/iverilog%20Installation.png)
+
