@@ -19,7 +19,7 @@
   $ make 
   $ sudo make install
   ```
- (https://github.com/nuretanjim/VSD-HDP/blob/main/Yosys%20Installation.png)
+ ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/Yosys%20Installation.png)
 
 
 ## iVerilog Installation
@@ -36,4 +36,4 @@ Steps to install gtkwave
 $sudo apt update
 $sudo apt install gtkwave
 ```
-(https://github.com/nuretanjim/VSD-HDP/blob/main/GTK%20Wave%20Installation.png)
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/GTK%20Wave%20Installation.png)
