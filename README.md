@@ -6,7 +6,7 @@
 - iverilog
 - gtkwave
 
-  ## Yosys Installation
+## Yosys Installation
   ``` html
   $ git clone https://github.com/YosysHQ/yosys.git
   $ cd yosys-master 
