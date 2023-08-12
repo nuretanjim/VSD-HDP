@@ -20,5 +20,5 @@
   $ sudo make install
 ```
 
-  ![alt text] (https://github.com/nuretanjim/VSD-HDP/blob/main/Yosys%20Installation.png)
+  ![alt text] (https://github.com/nuretanjim/VSD-HDP/blob/main/Yosys%20Installation.png/200/200)
 
