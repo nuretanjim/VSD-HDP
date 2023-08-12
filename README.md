@@ -24,8 +24,16 @@
 
 ## iVerilog Installation
   ``` html
-  $ Steps to install iverilog
+  Steps to install iverilog
   $sudo apt-get install iverilog
   ```
  (https://github.com/nuretanjim/VSD-HDP/blob/main/iverilog%20Installation.png)
 
+
+## GTKWave Installation
+  ``` html
+Steps to install gtkwave
+$sudo apt update
+$sudo apt install gtkwave
+```
+(https://github.com/nuretanjim/VSD-HDP/blob/main/GTK%20Wave%20Installation.png)
