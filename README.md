@@ -2,6 +2,9 @@
 ## Table of Content
 ### Day 0 
  Installation of Tools
-- [Yosys]
+- Yosys
 - iverilog
 - gtkwave
+
+  ## Yosys Installation
+  ``` html
