@@ -572,6 +572,15 @@ Output is provied below:
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/counter_opt2_synth.png)
 
 
+## Day 4
+## Table of Content
+- Objective
+- Synthesis Results
+
+### Objective 
+Gate Level implementation can provide mismatched functional output. Also, we need to ensure that the timing of the design match. Thus, Gate Level Simulation is needed to verify the logical correctness of design after synthesis. Day 4 focusses on how to perform Gate Level Simulation from netlist for multiple circuits (ternary_operator_mux.v,bad_mux.v, blocking_caveat.v) & compare the results with RTL Timing Analysis.
+
+
 
 
 
