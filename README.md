@@ -108,3 +108,16 @@ Day 2 describes the implementation of the library file .
 The RTL code and testbench for Day 2 and the library files for synthesis have been used from the following repository
 https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 
+## Synthesis Results
+The commands to synthesis multiple module file is given below :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: multiple_modules.v>
+yosys> synth -top <name: multiple_modules>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show <name: multiple_modules>
+yosys> write_verilog -noattr <name: multiple_modules_hier.v>
+```
+
+
