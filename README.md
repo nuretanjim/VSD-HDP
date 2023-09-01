@@ -289,8 +289,67 @@ For sequential circuits some key optimization aspects are as followed:
  - sequential logic cloning
 
 #### Synthesis Result
+##### Combinational logic optimizations for opt_check.v
+Commands to synthesize optimized mux are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file:opt_check.v>
+yosys> synth -top <name: opt_check>
+yosys> opt_clean -purge
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/Synth_opt_check.png)
 
 
+##### Combinational logic optimizations for opt_check2.v
+Commands to synthesize optimized mux are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: opt_check2.v>
+yosys> synth -top <name: opt_check2>
+yosys> opt_clean -purge
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/opt_check2.png)
+
+##### Combinational logic optimizations for opt_check3.v
+Commands to synthesize optimized mux are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: opt_check3.v>
+yosys> synth -top <name: opt_check3>
+yosys> opt_clean -purge
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/opt_check3.png)
+
+
+##### Combinational logic optimizations for opt_check4.v
+Commands to synthesize optimized mux are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: opt_check4.v>
+yosys> synth -top <name: opt_check4>
+yosys> opt_clean -purge
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/opt_check4.png)
 
 
 
