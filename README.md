@@ -6,6 +6,12 @@
 - iverilog
 - gtkwave
 
+### Day 1
+  Objective
+  Source Files
+  Simulation Results
+  Synthesis Results
+
 ## Yosys Installation
   ``` html
   $ git clone https://github.com/YosysHQ/yosys.git
