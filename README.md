@@ -1,16 +1,11 @@
 # VSD-HDP
-## Table of Content
 ### Day 0 
+## Table of Content
+
  Installation of Tools
 - Yosys
 - iverilog
 - gtkwave
-
-### Day 1
-- Objective
-- Source Files
-- Simulation Results
-- Synthesis Results
 
 ## Yosys Installation
   ``` html
@@ -43,3 +38,13 @@ $sudo apt update
 $sudo apt install gtkwave
 ```
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/GTK%20Wave%20Installation.png)
+
+
+### Day 1
+## Table of Content
+- Objective
+- Source Files
+- Simulation Results
+- Synthesis Results
+
+
