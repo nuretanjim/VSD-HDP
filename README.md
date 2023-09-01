@@ -119,5 +119,5 @@ yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
 yosys> show <name: multiple_modules>
 yosys> write_verilog -noattr <name: multiple_modules_hier.v>
 ```
-
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/hierarchical%20synthesis%20of%20multiple_module.png)
 
