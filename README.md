@@ -47,4 +47,9 @@ $sudo apt install gtkwave
 - Simulation Results
 - Synthesis Results
 
+## Objective
+RTL design needs to satisfy timing analysis and synthesis result should match the expected functionality. Day 1 focusses on how to use iverilog and gtkwave to perform the timing analysis. Besides, Yosys is introduced to execute the synthesis process. 
 
+## Source Files 
+The RTL code and testbench for a 2x1 Mux (good_mux.v,) and the library files for synthesis have been used from the following repository
+https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
