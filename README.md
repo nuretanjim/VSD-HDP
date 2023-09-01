@@ -84,7 +84,7 @@ $ show   #command to show logical version of synthesis that is reliazed
 
 
 
-### How to write netlist :
+### How to create netlist :
 
 write_verilog good_mux_netlist.v   #we can give any name here .
 
