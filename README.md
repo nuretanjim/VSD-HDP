@@ -62,3 +62,5 @@ The commands for timing analysis using iverilog and gtkwave are given below :
   $ gtkwave tb_good_mux.vcd
 
   ```
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/good_mux_timing_gtkwave.png)
