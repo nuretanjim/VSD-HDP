@@ -185,7 +185,7 @@ gtkwave <name vcd file: tb_dff_async_set.vcd>
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/timing_async_set.png)
 
 We can also synthesize DFF with Asynchronous set by following commands :
-Commands for generating timing analysis of DFF with Asynchronous reset are :
+Commands for generating timing analysis of DFF with Asynchronous set are :
 
 ``` html
 yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
@@ -211,7 +211,7 @@ gtkwave <name vcd file: tb_dff_async_set.vcd>
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/timing_analysis_sync_reset.png)
 
 We can also synthesize DFF with Asynchronous set by following commands :
-Commands for generating timing analysis of DFF with Asynchronous reset are :
+Commands for generating timing analysis of DFF with synchronous reset are :
 
 ``` html
 yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
@@ -226,6 +226,53 @@ Output is provied below:
 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/synthesis_synch_res.png)
 
+
+### Optimization of Special Circuit (Mult_2):
+Commands for optimized mux_2 synthesis are :
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: mult_2.v>
+yosys> synth -top <name: mul2>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show <name: mul2>
+
+```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/syth_mul_2.png)
+
+We can also generate the netlist by following commands :
+
+
+``` html
+yosys> write_verilog -noattr <name: mul2_net.v>
+```
+Output is provied below: 
+
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/mul_2_netlist.png)
+
+### Optimization of Special Circuit (Mult_8):
+Commands for optimized mux_8 synthesis are :
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: mult_8.v>
+yosys> synth -top <name: mult8>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show <name: mult8>
+yosys> write_verilog -noattr <name: mult8_net.v>
+
+```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/synth_mult8.png)
+
+We can also generate the netlist by following commands :
+
+
+``` html
+yosys> write_verilog -noattr <name: mul8_net.v>
+```
+Output is provied below: 
+
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/synth_mult8.png)
 
 
 
