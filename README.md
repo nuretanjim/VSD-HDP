@@ -355,4 +355,190 @@ Output is provied below:
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/opt_check4.png)
 
 
+##### Combinational logic optimizations for multiple_module_opt.v
+
+Commands to synthesize optimized mux are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: multiple_module_opt.v>
+yosys> synth -top <name: multiple_module_opt>
+yosys> flatten 
+yosys> opt_clean -purge
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/multiple_module_synth.png)
+
+
+##### Combinational logic optimizations for multiple_module_opt2.v
+
+Commands to synthesize optimized mux are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: multiple_module_opt.v>
+yosys> synth -top <name: multiple_module_opt>
+yosys> flatten 
+yosys> opt_clean -purge
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/multiple_module_2_synth.png)
+
+##### Sequential logic optimizations for dff_const1.v
+Commands for timing simulation are :
+
+``` html
+iverilog <name verilog: dff_const1.v> <name testbench: tb_dff_const1.v>
+./a.out
+gtkwave tb_dff_const1.vcd
+``` 
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const1_timing.png)
+
+
+Commands to synthesize the design are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: dff_const1.v>
+yosys> synth -top <name: dff_const1>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const1_Synth.png)
+
+
+
+##### Sequential logic optimizations for dff_const2.v
+Commands for timing simulation are :
+
+``` html
+iverilog <name verilog: dff_const1.v> <name testbench: tb_dff_const2.v>
+./a.out
+gtkwave tb_dff_const2.vcd
+``` 
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const2_timing.png)
+
+
+Commands to synthesize the design are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: dff_const2.v>
+yosys> synth -top <name: dff_const2>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const2_Synth.png)
+
+##### Sequential logic optimizations for dff_const3.v
+Commands for timing simulation are :
+
+``` html
+iverilog <name verilog: dff_const1.v> <name testbench: tb_dff_const3.v>
+./a.out
+gtkwave tb_dff_const3.vcd
+``` 
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const3_timing.png)
+
+
+Commands to synthesize the design are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: dff_const3.v>
+yosys> synth -top <name: dff_const3>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const3_Synth.png)
+
+
+
+##### Sequential logic optimizations for dff_const4.v
+Commands for timing simulation are :
+
+``` html
+iverilog <name verilog: dff_const1.v> <name testbench: tb_dff_const4.v>
+./a.out
+gtkwave tb_dff_const4.vcd
+``` 
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const4_timing.png)
+
+
+Commands to synthesize the design are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: dff_const4.v>
+yosys> synth -top <name: dff_const4>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const4_Synth.png)
+
+
+##### Sequential logic optimizations for dff_const5.v
+Commands for timing simulation are :
+
+``` html
+iverilog <name verilog: dff_const5.v> <name testbench: tb_dff_const4.v>
+./a.out
+gtkwave tb_dff_const5.vcd
+``` 
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const5_timing.png)
+
+
+Commands to synthesize the design are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: dff_const5.v>
+yosys> synth -top <name: dff_const5>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const5_Synth.png)
+
+
+
+
+
 
