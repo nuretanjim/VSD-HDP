@@ -196,6 +196,8 @@ yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
 yosys> show <name: dff_async_set>
 ```
 Output is provied below: 
+
+
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_async_synth.png)
 
 
