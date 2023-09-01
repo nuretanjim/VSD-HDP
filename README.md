@@ -121,3 +121,22 @@ yosys> write_verilog -noattr <name: multiple_modules_hier.v>
 ```
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/hierarchical%20synthesis%20of%20multiple_module.png)
 
+The netlist for multiple module is as followed:
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/netlist_hierarchical_multiple_modoules.png)
+
+Commands to generate flattened version of synthesiss are :
+``` html
+yosys> flatten
+
+```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/flattened_multiple_module.png)
+
+netlist for flattned module can be viewed from this command
+``` html
+yosys> write_verilog -noattr <name: multiple_modules_flat.v>
+```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/netlist_flattened_multiple_modules.png)
+
+
+
+
