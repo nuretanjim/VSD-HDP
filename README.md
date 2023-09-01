@@ -318,6 +318,7 @@ yosys> show
 
 ```
 Output is provied below: 
+
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/opt_check2.png)
 
 ##### Combinational logic optimizations for opt_check3.v
@@ -333,6 +334,7 @@ yosys> show
 
 ```
 Output is provied below: 
+
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/opt_check3.png)
 
 
@@ -349,6 +351,7 @@ yosys> show
 
 ```
 Output is provied below: 
+
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/opt_check4.png)
 
 
