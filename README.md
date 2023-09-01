@@ -91,3 +91,20 @@ write_verilog good_mux_netlist.v   #we can give any name here .
 
 write_verilog -noattr good_mux_netlist.v  #simplifies netlist 
 
+
+### Day 2
+## Table of Content
+- Objective
+- Source Files
+- Simulation Results
+- Synthesis Results
+
+
+## Objective
+Day 2 describes the implementation of the library file . 
+
+
+## Source Files 
+The RTL code and testbench for Day 2 and the library files for synthesis have been used from the following repository
+https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
