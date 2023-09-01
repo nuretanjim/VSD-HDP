@@ -109,6 +109,7 @@ The RTL code and testbench for Day 2 and the library files for synthesis have be
 https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 
 ## Synthesis Results
+### Hierarchical and Flattened Synthesis
 The commands to synthesis multiple module file is given below :
 
 ``` html
@@ -138,5 +139,40 @@ yosys> write_verilog -noattr <name: multiple_modules_flat.v>
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/netlist_flattened_multiple_modules.png)
 
 
+### Submodule Synthesiss :
+Sometimes to get better timing resuslts we might need to sythesis circuits from submodule level. To accomplish sub module level synthesis the commands will be :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: multiple_modules.v>
+yosys> synth -top <name: sub_module1>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show <name: sub_module1>
+```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/sub%20module%20synthesis%20for%20sub_module1.png)
+
+
+### DFF Asynchronous Reset Synthesiss :
+Commands for generating timing analysis of DFF with Asynchronous reset are :
+``` html
+iverilog <name verilog: dff_asyncres.v> <name testbench: tb_dff_asyncres.v>
+./a.out
+gtkwave <name vcd file: tb_dff_asyncres.vcd>
+```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/DFF%20asynchronous%20reset%20waveform%20.png)
+
+We can also synthesize DFF with Asynchronous reset by following commands :
+Commands for generating timing analysis of DFF with Asynchronous reset are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: dff_asyncres.v>
+yosys> synth -top <name: dff_asyncres>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show <name: dff_asyncres>
+```
+Output is provied below: 
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/synthesis_dff_async_reset.png)
 
 
