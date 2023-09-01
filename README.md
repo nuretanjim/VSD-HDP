@@ -274,6 +274,23 @@ Output is provied below:
 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/synth_mult8.png)
 
+### Day 3
+## Table of Content
+- Objective
+- Synthesis Results
+
+#### Objective
+Day 3 discussess about optimizations for both combinational and sequential circuits. For combinational circuits optimizations are done for area and power savings ,  to achieve constant propagation , minimizing / simplifying boolean expressions. 
+For sequential circuits some key optimization aspects are as followed:
+
+ - Sequential constant propagation
+ - state optimization
+ - retiming
+ - sequential logic cloning
+
+#### Synthesis Result
+
+
 
 
 
