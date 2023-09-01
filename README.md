@@ -7,10 +7,10 @@
 - gtkwave
 
 ### Day 1
-  Objective
-  Source Files
-  Simulation Results
-  Synthesis Results
+- Objective
+- Source Files
+- Simulation Results
+- Synthesis Results
 
 ## Yosys Installation
   ``` html
