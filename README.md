@@ -538,6 +538,40 @@ Output is provied below:
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_const5_Synth.png)
 
 
+##### Sequential logic optimizations for counter_opt.v.v
+
+Commands to synthesize the design are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: counter_opt.v>
+yosys> synth -top <name: counter_opt>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/counter_opt_synth.png)
+
+
+##### Sequential logic optimizations for counter_opt2.v.v
+
+Commands to synthesize the design are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: counter_opt2.v>
+yosys> synth -top <name: counter_opt2>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/counter_opt2_synth.png)
+
+
 
 
 
