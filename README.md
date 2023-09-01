@@ -64,3 +64,19 @@ The commands for timing analysis using iverilog and gtkwave are given below :
   ```
 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/good_mux_timing_gtkwave.png)
+
+## Synthesis Results
+The commands for synthesis of 2x1 mux using Yosys are given below :
+
+``` html
+$ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+$ read_verilog good_mux.v
+
+$ synth -top good_mux
+
+$ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib    # converts rtl code to gates based on the library.
+
+$ show   #command to show logical version of synthesis that is reliazed
+
+```
