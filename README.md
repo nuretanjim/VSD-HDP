@@ -80,3 +80,4 @@ $ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib    # converts rtl
 $ show   #command to show logical version of synthesis that is reliazed
 
 ```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/2x1%20good_mux%20synthesis.png)
