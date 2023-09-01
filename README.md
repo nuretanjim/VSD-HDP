@@ -176,7 +176,7 @@ Output is provied below:
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/synthesis_dff_async_reset.png)
 
 ### DFF Asynchronous Set Synthesiss :
-Commands for generating timing analysis of DFF with Asynchronous reset are :
+Commands for generating timing analysis of DFF with Asynchronous set are :
 ``` html
 iverilog <name verilog: dff_async_set.v> <name testbench: tb_dff_async_set.v>
 ./a.out
@@ -184,7 +184,7 @@ gtkwave <name vcd file: tb_dff_async_set.vcd>
 ```
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/timing_async_set.png)
 
-We can also synthesize DFF with Asynchronous reset by following commands :
+We can also synthesize DFF with Asynchronous set by following commands :
 Commands for generating timing analysis of DFF with Asynchronous reset are :
 
 ``` html
@@ -199,6 +199,33 @@ Output is provied below:
 
 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/dff_async_synth.png)
+
+
+### DFF Synchronous Reset Synthesiss :
+Commands for generating timing analysis of DFF with Synchronous reset are :
+``` html
+iverilog <name verilog: dff_async_set.v> <name testbench: tb_dff_sync_reset.v>
+./a.out
+gtkwave <name vcd file: tb_dff_async_set.vcd>
+```
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/timing_analysis_sync_reset.png)
+
+We can also synthesize DFF with Asynchronous set by following commands :
+Commands for generating timing analysis of DFF with Asynchronous reset are :
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: dff_syncres.v>
+yosys> synth -top <name: dff_syncres>
+yosys> dfflibmap -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show <name: dff_syncres>
+```
+Output is provied below: 
+
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/synthesis_synch_res.png)
+
 
 
 
