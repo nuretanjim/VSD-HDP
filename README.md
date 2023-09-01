@@ -53,3 +53,12 @@ RTL design needs to satisfy timing analysis and synthesis result should match th
 ## Source Files 
 The RTL code and testbench for a 2x1 Mux (good_mux.v,) and the library files for synthesis have been used from the following repository
 https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+
+## Simulation Results
+The commands for timing analysis using iverilog and gtkwave are given below :
+``` html
+  $ iverilog good_mux.v tb_good_mux.v
+  $ ./a.out
+  $ gtkwave tb_good_mux.vcd
+
+  ```
