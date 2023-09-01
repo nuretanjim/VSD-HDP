@@ -81,3 +81,13 @@ $ show   #command to show logical version of synthesis that is reliazed
 
 ```
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/2x1%20good_mux%20synthesis.png)
+
+
+
+### How to write netlist :
+
+write_verilog good_mux_netlist.v   #we can give any name here .
+
+
+write_verilog -noattr good_mux_netlist.v  #simplifies netlist 
+
