@@ -101,8 +101,13 @@ write_verilog -noattr good_mux_netlist.v  #simplifies netlist
 
 
 ## Objective
-Day 2 describes the implementation of the library file . 
+Day 2 describes the implementation of the library file. It also describes different aspects of the library file such as Process Technology (Described as TT , means typical process), Voltage and temperature. 
 
+Process technology is a crucial factor as variation in implementation can occur due to fabrication related differences. For this library cell voltage is 1.8 volt and temperature is considered as 25°C. 
+All these 3 factores determine how the implemented circuit will perform (Faster/ slower).
+
+Delay model is implemented as lookup table. Different cells ( and / or / not) are described in the library which provides consumed power and timing information for the corresponding cells.
+During day 2 session using the library file hierarchical and flattened simulation results have been generated and compared. Submodule level design generation has been implemented. Besides, synchronous and asynchronous DFF with set and reset pin have been synthesized. 
 
 ## Source Files 
 The RTL code and testbench for Day 2 and the library files for synthesis have been used from the following repository
