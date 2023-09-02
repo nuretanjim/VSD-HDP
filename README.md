@@ -599,7 +599,6 @@ yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
 yosys> read_verilog <name of verilog file: ternary_operator_mux.v>
 yosys> synth -top <name: ternary_operator_mux>
 yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
-
 yosys> show
 ```
 Output is provied below: 
@@ -625,4 +624,51 @@ gtkwave tb_ternary_operator_mux.vcd
 Output is provied below: 
 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/ternary_operator_GLS.png)
+
+### RTL Based Timing Analysis and GLS Simulation for bad_mux.v
+Following commands provides RTL based timing analysis of bad_mux.v
+
+``` html
+iverilog <name verilog: bad_mux.v> <name testbench: tb_bad_mux.v>
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/bad_mux_RTL_Simulation.png)
+
+Following commands provides RTL based synthesis of ternary_operator_mux.v:
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: bad_mux.v>
+yosys> synth -top <name: bad_mux>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/bad_mux_RTL_Synthesis.png)
+
+Following command shows the generated netlist 
+``` html
+yosys> write_verilog -noattr <name of netlist: bad_mux_net.v>
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/bad_mux_RTL_Netlist.png)
+
+Following command provides GLS 
+``` html
+iverilog <path to verilog model: ../mylib/verilog_model/primitives.v> <path to sky130_fd_sc_hd__tt_025C_1v80.lib: ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib> <name netlist: ternary_operator_mux_net.v> <name testbench: tb_ternary_operator_mux.v>
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/bad_mux_GLS.png)
+
+
 
