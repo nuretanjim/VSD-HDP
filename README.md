@@ -666,9 +666,52 @@ iverilog <path to verilog model: ../mylib/verilog_model/primitives.v> <path to s
 gtkwave tb_ternary_operator_mux.vcd
 
 ```
-Output is provied below: 
+Output is provied below which mismatches with RTL timing simulation: 
 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/bad_mux_GLS.png)
 
 
 
+### RTL Based Timing Analysis and GLS Simulation for blocking_caveat.v
+Following commands provides RTL based timing analysis of bad_mux.v
+
+``` html
+iverilog <name verilog: blocking_caveat.v> <name testbench: tb_blocking_caveat.v>
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/blocking_caveat_RTL_Simulation.png)
+
+Following commands provides RTL based synthesis of ternary_operator_mux.v:
+
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: blocking_caveat.v>
+yosys> synth -top <name: blocking_caveat>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> show
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/blocking_caveat_RTL_Synthesis.png)
+
+Following command shows the generated netlist 
+``` html
+yosys> write_verilog -noattr <name of netlist: blocking_caveat_net.v>
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/blocking_caveat_RTL_Netlist.png)
+
+Following command provides GLS 
+``` html
+iverilog <path to verilog model: ../mylib/verilog_model/primitives.v> <path to verilog model: ../mylib/verilog_model/sky130_fd_sc_hd.v> <name netlist: blocking_caveat_net.v> <name testbench: tb_blocking_caveat.v>
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/blocking_caveat_GLS.png)
