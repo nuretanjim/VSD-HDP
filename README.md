@@ -137,7 +137,7 @@ yosys> flatten
 ```
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/flattened_multiple_module.png)
 
-netlist for flattned module can be viewed from this command
+Netlist for flattned module can be viewed using the following command
 ``` html
 yosys> write_verilog -noattr <name: multiple_modules_flat.v>
 ```
