@@ -714,4 +714,4 @@ gtkwave tb_blocking_caveat.vcd
 ```
 Output is provied below: 
 
-![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/blocking_caveat_GLS.png)
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/blocking_caveat_GLS_updated.png)
