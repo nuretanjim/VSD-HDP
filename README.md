@@ -580,8 +580,49 @@ Output is provied below:
 ### Objective 
 Gate Level implementation can provide mismatched functional output. Also, we need to ensure that the timing of the design match. Thus, Gate Level Simulation is needed to verify the logical correctness of design after synthesis. Day 4 focusses on how to perform Gate Level Simulation from netlist for multiple circuits (ternary_operator_mux.v,bad_mux.v, blocking_caveat.v) & compare the results with RTL Timing Analysis.
 
+### RTL Based Timing Analysis and GLS Simulation for ternary_operator_mux.v
+Following commands provides RTL based timing analysis of ternary_operator_mux.v
 
+``` html
+iverilog <name verilog: ternary_operator_mux.v> <name testbench: tb_ternary_operator_mux.v>
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+Output is provied below: 
 
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/ternary_operator_RTL_Simulation.png)
 
+Following commands provides RTL based synthesis of ternary_operator_mux.v:
 
+``` html
+yosys> read_liberty -lib <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <name of verilog file: ternary_operator_mux.v>
+yosys> synth -top <name: ternary_operator_mux>
+yosys> abc -liberty <path to sky130_fd_sc_hd__tt_025C_1v80.lib>
+
+yosys> show
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/ternary_operator_RTL_Synthesis.png)
+
+Following command shows the generated netlist 
+``` html
+yosys> write_verilog -noattr <name of netlist: ternary_operator_mux_net.v>
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/ternary_operator_RTL_Netlist.png)
+
+Following command provides GLS 
+``` html
+iverilog <path to verilog model: ../mylib/verilog_model/primitives.v> <path to sky130_fd_sc_hd__tt_025C_1v80.lib: ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib> <name netlist: ternary_operator_mux_net.v> <name testbench: tb_ternary_operator_mux.v>
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+
+```
+Output is provied below: 
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/ternary_operator_GLS.png)
 
