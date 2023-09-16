@@ -725,9 +725,8 @@ Output is provied below:
 ## Day 6
 ### Objective
 Day 6 describes different stages of synthesis (specifically Static Timing Analysis), understanding SDC (Synopsys Design Constraints). It describes why different falvours of gates are required. For example , fast cells are needed for setup time and slow cells helps to maintain the requirements for hold time. Faster cells are bad interms of power and area. On the other hand slower circuits may not meet the timing requirements. 
-The session also explains constraints. constraints are the information to guide the synthesizer to pick correct library cells to meet design requirements. 
-The later parts of the day demonstrates the usage of Design Compiler which is a synthesis tool for ASIC design flow from synopsis.
-Lastly, Day 6 provides commonly used directives of TCL.
+
+The session also explains constraints. constraints are the information to guide the synthesizer to pick correct library cells to meet design requirements. The later parts of the day demonstrates the usage of Design Compiler which is a synthesis tool for ASIC design flow from synopsis.Lastly, Day 6 provides commonly used directives of TCL.
 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/1%20Larger%20cell%20vs%20smaller%20cell.png)
 
