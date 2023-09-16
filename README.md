@@ -735,3 +735,24 @@ The session also explains constraints. constraints are the information to guide 
 ![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/3.Timing%20Archs.png)
 
 
+
+
+## Day 6=7
+
+### Objective
+Day 7 describes basics of Static Timing Analysis and constraints in detail. Different types of timing paths are mentioned (Reg to Reg, Reg to out, Reg to in). How .lib file guides synthesizing process by providing attribute information is mentioned. 
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/1.%20Timing%20Path_D7.png)
+
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/2.%20Timing%20Path%20D7.png)
+
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/3.%20Different%20Timing%20Path.png)
+
+
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/4.Unateness.png)
+
+
+
+
