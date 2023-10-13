@@ -762,9 +762,11 @@ Day 8 demonstrates the directives to specify the parameters for constraints in D
 
 #### Clock Generation :
 Clock is generated using 
+
 -Oscillator
 -PLL
 -External Source
+
 All the sources have inherent variations in the clock period due to stochastic effects. For example, if first edge comes at 5 ns with a period of 10 ns then the second rising edge will arrive at (15 ns + delta). This scenario happens due to jitter (Stochastic variagiotn of clock generation). 
 
 Clock Skew: Delay due to clock distribution network
@@ -772,6 +774,7 @@ Clock Skew: Delay due to clock distribution network
 #### Clock Modelling 
 
 Parameters for clock modelling are :
+
 -Period
 -Source Latency
 -clock Network Latency
