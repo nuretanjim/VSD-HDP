@@ -781,4 +781,67 @@ Parameters for clock modelling are :
 -Clock Skew : Clock path delay mismatches which causes difference in the arrival of clock. Clock skew can be reduced but never be completely nullified
 - Jitter Stochastic variation in the arrival of clock edge. (Duty cycle Jitter, Period Jitter)
 
-#### Note: After CTS skew and CN latency should be removed. Clock uncertainty will only have jitter. 
+#### Note: After CTS skew and CN latency should be removed. Clock uncertainty will only have jitter.
+
+Constraints should be considerered for :
+
+Reg to Reg paths: period, latency, uncertainty
+Input to Reg : IO2REG , input delay, input transition
+Reg to Outuput path : Reg to Output, output delay, output load
+
+#### Dc Takes contraints in the form of SDC. Few commands are given below : 
+Commands for getting ports :
+``` html
+get_ports clk;
+get_ports *clk* #returns a collection of ports having 'clk' in their names
+get_ports * #returns all ports
+get_ports * -filter "direction==in/out"
+
+```
+
+command for querying clocks :
+
+``` html
+get_clocks *
+get_clocks *clk*
+get_clocks * -filter "period > 10"
+get_attribute [get_clocks my_clk] period
+get_attribute [get_clocks my_clk] is_generated
+report_clocks my_clk
+
+Generating clock
+``` html
+create_clock -name <clk_name> -per <period> [clock definition point] (optional)-wave{first rising and falling edges};
+set_clock_latency <delay> <clk_name>; #models network clock delay
+set_clock_uncertainty <skew+jitter> <clk_name>; #should be changed to only jitter post CTS
+```
+
+Commands for input constraints : 
+``` html
+set_input_delay -max <max delay> -clock [get_clocks <ref clk name>] [get_ports <name>*];
+set_input_delay -min <min delay> -clock [get_clocks <ref clk name>] [get_ports <name>*];
+set_input_transition -max <max delay> [get_ports <name>*];
+set_input_transition -min <min delay> [get_ports <name>*];
+```
+
+Command for output constraints:
+``` html
+set_output_delay -max <max delay> -clock [get_clocks <ref clk name>] [get_ports <name>*];
+set_output_delay -min <min delay> -clock [get_clocks <ref clk name>] [get_ports <name>*];
+set_output_load -max <max load> [get_ports <name>*];
+set_output_load -min <min load> [get_ports <name>*];
+```
+
+
+#### Key Notes from Lab 8:
+In digital design net can have only 01 driver. 
+
+#### Lecture 9 : 
+Discusses about prograpagtion delay, generated clock command, 
+-div 1 means no clock divider is present.
+
+#### Lecture 10 : 
+-Discussion about max and min delay
+-Negative Ve delay for manx delay is relaxing 
+-Positive delay for minimun delay is tightening
+-Discussion about virtual clock
