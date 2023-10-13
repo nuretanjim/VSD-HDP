@@ -845,3 +845,6 @@ Discusses about prograpagtion delay, generated clock command,
 -Negative Ve delay for manx delay is relaxing 
 -Positive delay for minimun delay is tightening
 -Discussion about virtual clock
+
+
+## Day #8
