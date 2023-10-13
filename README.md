@@ -776,6 +776,9 @@ Clock Skew: Delay due to clock distribution network
 Parameters for clock modelling are :
 
 -Period
--Source Latency
--clock Network Latency
--Clock Skew
+-Source Latency : Time taken by clock source to generate clock
+-clock Network Latency: Time taken by clock distribution network
+-Clock Skew : Clock path delay mismatches which causes difference in the arrival of clock. Clock skew can be reduced but never be completely nullified
+- Jitter Stochastic variation in the arrival of clock edge. (Duty cycle Jitter, Period Jitter)
+
+#### Note: After CTS skew and CN latency should be removed. Clock uncertainty will only have jitter. 
