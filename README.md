@@ -737,7 +737,7 @@ The session also explains constraints. constraints are the information to guide 
 
 
 
-## Day 6=7
+## Day #7
 
 ### Objective
 Day 7 describes basics of Static Timing Analysis and constraints in detail. Different types of timing paths are mentioned (Reg to Reg, Reg to out, Reg to in). How .lib file guides synthesizing process by providing attribute information is mentioned. 
