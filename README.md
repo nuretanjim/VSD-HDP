@@ -847,4 +847,25 @@ Discusses about prograpagtion delay, generated clock command,
 -Discussion about virtual clock
 
 
-## Day #8
+## Day #9
+### Lecture 11
+Day 9 discusses aboute optimization for combinational circuits. 
+Optimization goals 
+-Meet timing requirements
+-Meet area requirement
+
+Some techniques that are discussed are mentioned below: 
+-constant Progapagation
+-Boolean Logic Optimization
+-Resource Sharing
+-Logic Sharing 
+-Balanced vs Preferential Implementation 
+
+### Lecture 12 
+Lecture 12 focusses on some basic seuential optimizations such as :
+-Constant Propagation
+-Retiming
+-Unused Flop Removal
+-Clock Gating
+
+Besides, optimization of unloaded outputs has been discussed. 
