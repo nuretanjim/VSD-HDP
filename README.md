@@ -869,3 +869,26 @@ Lecture 12 focusses on some basic seuential optimizations such as :
 -Clock Gating
 
 Besides, optimization of unloaded outputs has been discussed. 
+
+## Day #10 Project Design
+I have chosen an 8 bit alu implementation for this project. The code for the project can be found from the following repository 
+``` html
+https://github.com/aashish-tiwary/iiitb_alu/blob/main/iiitb_alu.v
+```
+
+
+### Synthesis 
+
+The synthesis result using Yosys is given below : 
+
+``` html
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog alu_8bit.v
+synth -top iiitb_alu
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+The synthesis output is shown below:
+
+![alt text](https://github.com/nuretanjim/VSD-HDP/blob/main/ALU_Synthesis.png)
